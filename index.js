@@ -1,5 +1,12 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) { 
+    const complement = target - array[i]
+    for (let j = i + 1; j < array.length; j++){
+      if (array[j] === complement) return true;
+    }
+
+  }
+  return false
 }
 
 /* 
@@ -8,6 +15,10 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+Take array and add each element against each other.
+check if the sum is equal to target
+if sum is equal to target return true
+if sum is not equal to target then return false
 */
 
 /*
